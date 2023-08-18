@@ -5,8 +5,8 @@
    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/326/326298.png"> 
    </head>
    <style>
-       *
-       {
+      
+       *{
            padding: 0px;
            margin: 0px;
            box-sizing: border-box;
@@ -41,7 +41,6 @@
        
        nav ul li a:hover{
            background-color:beige;
-/*           border-bottom: 4px solid darkolivegreen ;*/
            color:darkolivegreen;
        }
        
@@ -230,7 +229,9 @@
        
        main .hr{
            border-bottom: 2px solid darkolivegreen;
-          padding:20px; 
+          padding:20px;
+           margin-bottom: 20px;
+           
        }
        
        
@@ -244,6 +245,7 @@
        }
        main #right .intro{
            padding: 20px;
+           padding-bottom: 15px;
            position: relative;
           
        }
@@ -287,11 +289,14 @@
            font-weight: 200;
        }
        main #right .rs .sc p:hover{
-           background-color: rgba(85, 107, 47,0.4)
+           background-color: rgba(85, 107, 47,0.4);
        }
        main #right .rs .sc a{
            padding: 10px;
            margin-top: 10px;
+       }
+       main #right .rs .sc a :hover{
+        background-color: darkolivegreen;
        }
        main #right .rs .sc #h1{
            background-color: darkolivegreen;
@@ -303,9 +308,45 @@
            background-color:rgba(85, 107, 47,0.4);
            color: beige;
        }
-      
-         .clear{clear: both;}
+       main #right .rs .posts{
+            background-color:beige;
+            padding: 10px;
+       }
        
+       main #right .rs .posts ul{
+           padding: 10px;
+           list-style-type: none;
+       }
+       main #right .rs .posts ul li{
+           padding: 10px;
+           border-top: 1px solid gray;
+       }
+       main #right .rs .posts ul li .l{
+           float: left;
+           width: 15%;
+       }
+       main #right .rs .posts ul li .r{
+           float: right;
+           width: 85%;
+       }
+       main #right .posts ul li .r p{
+           padding: 4px 12px;
+           font-size: 15px;
+           font-weight: bold;
+           font-family: monospace;
+           color: darkolivegreen;
+       }
+       main #right .posts ul li .r #nam{
+            font-size: 12px;
+           font-weight: 600;
+       }
+       main #right .rs .posts  ul li:hover{
+           background-color: rgba(85, 107, 47,0.4);
+       }
+    
+       
+       .clear{content: " ";
+       clear: both;}
        footer{
            background-color:beige;
            padding: 50px;
@@ -324,10 +365,36 @@
            color: olive;
        }
        
-        /* For mobile phones: */
-  nav, main, header {
-    width: 100%;
-  }
+         @media screen and (max-width: 650px){
+          main #left article{ width: 100%; }
+           main #right {padding-top: 0px; float: none;width: 100%}
+          main #left  {  float:none; width: 100%;}
+       }
+       
+         @media screen and (max-width: 930px){
+             main #right .intro p{ font-size: 15px; top: 55%;}
+             main #right .intro p span{ font-size: 20px; }
+             main #right .intro{padding-bottom: 0px;}
+       }
+        @media screen and (max-width: 750px){
+          header h1{ left:25%;}
+          main #right .intro p{ font-size: 10px; top: 50%;  left: 15% }
+          main #right .intro p span{ font-size: 17px; }
+          main #right .intro{padding-bottom: 0px;}
+          main #right .rs .sc p{ font-size: 15px; font-weight: 600;}
+          main #right .rs .sc p span{ font-size: 10px;}
+          main #left article img{ height: 60%; }
+          main #right .rs .posts .r p{
+           padding: 4px 30px;
+           font-size: 15px;
+           font-weight: 600;
+       }
+          
+       }
+        @media screen and (max-width: 350px){
+          main #left article img{ width: 80%; height: 60%; }
+       }
+    
    </style>
    
    
@@ -378,7 +445,7 @@
                        <button class="leftb">like! <img src="thumbs-up.png" ></button>
                        <button class="rightb">replies <span> 1</span></button>
                    </div>
-                       <div class="hr"><hr></div>
+                       <div class="hr"></div>
                    
                  
                      <p class="title">Juniper</p>
@@ -391,7 +458,7 @@
                        <button class="leftb">like! <img src="thumbs-up.png" ></button>
                        <button class="rightb">replies<span>1</span></button>
                    </div>
-                   <div class="hr"><hr></div>
+                   <div class="hr"></div>
                    
                </article>
                 
@@ -418,12 +485,14 @@
                 
                  <section class="rs">
                     <h2>Follow me!</h2>
-                    <div class="sc">  
-                     <a href=""><img src="facebook.png"></a>
-                    <a href=""><img src="twitter.png" ></a>
-                    <a href=""><img src="snapchat.png" ></a>
-                    <a href=""><img src="instagram.png" ></a>  
-                    </div>    
+                    <nav class="sc">  
+                    <a href=""><img src="https://cdn-icons-png.flaticon.com/128/216/216564.png" width="30px" height="30px"></a>
+                    <a href=""><img src="https://cdn-icons-png.flaticon.com/128/216/216578.png" width="30px" height="30px" ></a>
+                    <a href=""><img src="https://cdn-icons-png.flaticon.com/128/311/311291.png" width="30px" height="30px" ></a>
+                    <a href=""><img src="https://cdn-icons-png.flaticon.com/128/216/216568.png"  width="30px" height="30px" ></a> 
+                    <a href=""><img src="https://cdn-icons-png.flaticon.com/128/216/216570.png"  width="30px" height="30px" ></a>  
+
+                    </nav>    
                 </section>
                 
                  <section class="rs">
@@ -436,6 +505,67 @@
                     <h4>video</h4>
                     <h4>how_to</h4>
                     <h4>ask_me</h4>
+                    </div>    
+                </section>
+                
+                
+                 <section class="rs">
+                    <h2>Popular Posts</h2>
+                    <div class="posts">    
+                    <ul>
+                        
+                          <li>
+                            <div class="l">
+                                <img src="programming.png" width="40" height="40">
+                            </div>
+                            
+                            <div class="r">
+                                <p >Be a programmer</p>
+                                <p id="nam">Elone mask</p>
+                            </div>
+                            
+                            <div class="clear"></div>
+                        </li>
+                        
+                        <li>
+                            <div class="l">
+                                <img src="https://cdn-icons-png.flaticon.com/128/628/628283.png" width="40" height="40">
+                            </div>
+                            
+                            <div class="r">
+                                <p >Plant power</p>
+                                <p id="nam">Sozan madnis</p>
+                            </div>
+                            
+                            <div class="clear"></div>
+                        </li>
+                          
+                           <li>
+                         <div class="l">
+                                <img src="yarn.png" width="40" height="40">
+                            </div>
+                            
+                            <div class="r">
+                                <p>Crochet lifestyle</p>
+                                <p id="nam">Sed mattis nunc</p>
+                            </div>
+                            
+                            <div class="clear"></div>
+                        </li>
+                        
+                            <li>
+                         <div class="l">
+                                <img src="https://cdn-icons-png.flaticon.com/128/5278/5278613.png" width="40" height="40">
+                            </div>
+                            
+                            <div class="r">
+                                <p>Made with love!</p>
+                                <p id="nam">Zahra Essam</p>
+                            </div>
+                            
+                            <div class="clear"></div>
+                        </li>
+                    </ul>
                     </div>    
                 </section>
                 
@@ -455,3 +585,5 @@
     </footer>
    </body>
 </html>
+
+
